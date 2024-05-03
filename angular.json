@@ -7,7 +7,17 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -30,6 +40,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+              "src/output.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c4e94756-ba5b-460d-927a-91be572a90f6"
   }
 }
